@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/789b44ed3d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+        <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            <div class="start-text">
+                <h1>I'm Abhinav</h1>
+                <p>I am currently a final year <br> undergraduate student studying in <br>Raghu Engineering College.</p>
+            </div>
+        </div>
+    </div>
+   <div id="about">
+    <div class="container">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="img2.jpeg" height="400" width="300">
+        </div>
+        <div class="about-col-2">
+            <h2>About me</h2>
+            <p>I am a 20 year who is currently working on 
+                improving my skils in Data Science fields of 
+            Data Analytics and Machine Learning. </p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Data Analytics</span><br>Analaysing of large datasets and drawing insights</li>
+                    <li><span>Machine Learning</span><br>Building of Predictive modelels using ML algorithms</li>
+                    <li><span>Front End</span><br>Buliding UI/UX for websites</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2020-2024</span><br>B.Tech in Comupter Science with Data Science</li>
+                    <li><span>2018-2020</span><br>Intermediate</li>
+                    <li><span>2006-2018</span><br>Schooling</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="certifications">
+                <ul>
+                    <li><span>Data Structures and Algorithims using Python</span><br>NPTEL IIT-M</li>
+                    <li><span>Database Management Systems</span><br>NPTEL IIT-KGP</li>
+                    <li><span>Data Analytics</span><br>IBM</li>
+                </ul>
+            </div>
+
+        </div>
+      </div>  
+    </div>
+    </div>
+
+   <script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+           tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab"); 
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+
+   <div id="services">
+    <div class="cotainer">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div>
+                <i class="fa-solid fa-code-branch"></i>
+                <h3>Disease Prediction</h3>
+                <p>It is a machine leaning project which predicts the disease according to the checck-listed sypmtoms</p>
+                <a href="#">learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <h3>Portfolio</h3>
+                <p>My portfolio along with the prjects I have done</p>
+                <a href="#">learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-robot"></i>
+                <h3>Deep Learning</h3>
+                <p>It is a machine leaning project which predicts the disease according to the checck-listed sypmtoms</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="left">
+                <h2>Contact me</h2>
+                <p><i class="fa-solid fa-envelope"></i>saiabhinav04@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>1234567890</p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/sai-abhinav-5a1666283"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Abhinav0410"><i class="fa-brands fa-github"></i></a>
+
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
